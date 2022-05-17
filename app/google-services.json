@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "804106371042",
-    "project_id": "photoshare-8ea65",
-    "storage_bucket": "photoshare-8ea65.appspot.com"
+    "project_number": "341323212520",
+    "project_id": "photoshare-28af8",
+    "storage_bucket": "photoshare-28af8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:804106371042:android:51963a481e0be5ea1843bb",
+        "mobilesdk_app_id": "1:341323212520:android:719d6fa4889e077fc30b5d",
         "android_client_info": {
           "package_name": "hu.ait.photoshare"
         }
       },
       "oauth_client": [
         {
-          "client_id": "804106371042-6s9qvplermcpu4oam0gl7t4egfs6jh0d.apps.googleusercontent.com",
+          "client_id": "341323212520-420ednh9d6kmdah2hkrap7htdfavbq3t.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBBjNcPVRzNeb97xZukQWfllm4bIEYd-Es"
+          "current_key": "AIzaSyBuMjMwSRhsUmFcwvGfRyCPjhChVBvaTOo"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "804106371042-6s9qvplermcpu4oam0gl7t4egfs6jh0d.apps.googleusercontent.com",
+              "client_id": "341323212520-420ednh9d6kmdah2hkrap7htdfavbq3t.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
