@@ -181,6 +181,7 @@ class CreatePostActivity : AppCompatActivity(), MyLocationManager.OnNewLocationA
                 })
             }
     }
+
     var lastLocation: Location? = null
 
     override fun onNewLocation(location: Location) {

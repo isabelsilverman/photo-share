@@ -44,5 +44,17 @@
             android:layout_height="wrap_content"
             android:text="Delete"/>
 
+        <Button
+            android:id="@+id/btnComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comment"/>
+
+        <Button
+            android:id="@+id/btnViewComments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Comment"/>
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

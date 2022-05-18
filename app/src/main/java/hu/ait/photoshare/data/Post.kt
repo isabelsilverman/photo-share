@@ -5,5 +5,6 @@ data class Post (
     var user: String = "",
     var caption: String = "",
     var imgUrl: String = "",
-    var location: String = ""
+    var location: String = "",
+    var comments: Array<Comment> = emptyArray()
 )

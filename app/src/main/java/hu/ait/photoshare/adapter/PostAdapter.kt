@@ -1,15 +1,20 @@
 package hu.ait.photoshare.adapter
 
 import android.content.Context
+import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.firebase.firestore.FirebaseFirestore
+import hu.ait.photoshare.CommentsActivity
 import hu.ait.photoshare.CreatePostActivity
 import hu.ait.photoshare.data.Post
 import hu.ait.photoshare.databinding.PostRowBinding
+import hu.ait.photoshare.dialog.CommentDialog
 
 class PostAdapter : RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
@@ -51,6 +56,23 @@ class PostAdapter : RecyclerView.Adapter<PostAdapter.ViewHolder> {
 
         holder.btnDelete.setOnClickListener {
             removePost(holder.adapterPosition)
+        }
+
+        holder.btnComment.setOnClickListener {
+            val dialog = CommentDialog()
+
+            val bundle = Bundle()
+            bundle.putSerializable("POST_KEY", postKeys[holder.adapterPosition])
+            dialog.arguments = bundle
+
+            val fragmentManager = (context as FragmentActivity).supportFragmentManager
+            dialog.show(fragmentManager, "COMMENT_DIALOG")
+        }
+
+        holder.btnViewComments.setOnClickListener {
+            val intentDetails = Intent(context, CommentsActivity::class.java)
+            intentDetails.putExtra("POST_KEY", postKeys[holder.adapterPosition])
+            context.startActivity(intentDetails)
         }
 
         if (post.imgUrl.isNotEmpty()) {
@@ -96,6 +118,8 @@ class PostAdapter : RecyclerView.Adapter<PostAdapter.ViewHolder> {
         var tvLocation = binding.tvLocation
         var tvCaption = binding.tvCaption
         var btnDelete = binding.btnDelete
+        var btnComment = binding.btnComment
+        var btnViewComments = binding.btnViewComments
         var ivPhoto = binding.ivPhoto
 
     }
